@@ -24,3 +24,11 @@ The region doesn't matter but make sure to create the database in "Test mode"!
 This will create the database with a connected REST API that we'll use throughout this section.
 
 You can then use the URL displayed on the screen in your React code to send requests to that database.
+
+#### Frontend Code Depends On Backend Code
+
+<img src="./src/assets/images/advance-redux-2.png">
+
+#### Where to put Code?
+
+<img src="./src/assets/images/advance-redux-3.png">
