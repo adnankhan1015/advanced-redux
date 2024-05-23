@@ -7,7 +7,8 @@
 1. Redux & Side Effects (and Asynchronous Code)
 
 - Reducers must be **pure, side-effect free, synchronous** functions
-  <img src="./src/assets/images/advance-redux-1.png>
+
+<img src="./src/assets/images/advance-redux-1.png">
 
 ### Using Firebase as a Backend
 
@@ -51,3 +52,21 @@ It's a problem because this will send the initial (i.e. empty) cart to our backe
 - Create a new state in out **ui-slice** REDUX with name **notification** and add a reducer with the name **showNotification**.
 - Use the notification state and the notification reducer function inside of the **app component**.
 - Display all the relivent notification with the **useDispatch** hook, and dispatch all the relivent data which we define in the action.payload.
+
+#### Using an Action Creater Thunk
+
+- e.g `uiActions.showNotification({...})` are automatically created action creators.
+- Now we can also write our own action creators and we can write them to create so-called **thunks**.
+  Q. What is a **Thunk** and why we want to do that?
+  - A function taht **delay an action** until later, until something else finished.
+  - And we couldl write an action create as a thunk, to write an action creator, which does not immediately return the action object, but which instead returns another function which eventually returns the action.
+  - So that we can run some other code, before we then dispatch the actual action object that we did want to create.
+
+**Example**
+
+- We can use a function `export const sendCartData = (cart) => {}` that returns another function as an action as well.
+  `export const sendCartData = (cart) => { return () => {}}`
+
+- That is built into **REDUX** when using **REDUX TOOLKIT**
+
+#### Getting Started with Fetching Data
