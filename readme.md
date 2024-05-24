@@ -1,10 +1,10 @@
-# REDUC DEEP DIVE
+# REDUX DEEP DIVE
 
 - Handling **Async Tasks** with Redux
-- Wher to **Put Your Code**
+- Where to **Put Your Code**
 - The Redux **DevTools**
 
-1. Redux & Side Effects (and Asynchronous Code)
+1. **Redux & Side Effects (and Asynchronous Code)**
 
 - Reducers must be **pure, side-effect free, synchronous** functions
 
@@ -30,7 +30,7 @@ You can then use the URL displayed on the screen in your React code to send requ
 
 <img src="./src/assets/images/advance-redux-2.png">
 
-#### Where to put Code?
+2. **Where to put Code?**
 
 <img src="./src/assets/images/advance-redux-3.png">
 
@@ -70,3 +70,15 @@ It's a problem because this will send the initial (i.e. empty) cart to our backe
 - That is built into **REDUX** when using **REDUX TOOLKIT**
 
 #### Getting Started with Fetching Data
+
+- We did a fetch request to get data from our dummy firebase backend.
+- We create an **action creator** for it and then use it inside of `app.js`
+
+3. **The Redux DevTools**
+
+- These are the tools which makes debugging Redux and our Redux state a bit easier
+- When using Redux without Redux toolkit, you had to setup some extra code to make Redux Devtools work.
+- That is super useful to understand the impact of your actions
+- You can even do something which is called time traveling
+  - e.g you can jump to an older state, by clicking on the jump button.
+- Helps you debug your REDUX code.
